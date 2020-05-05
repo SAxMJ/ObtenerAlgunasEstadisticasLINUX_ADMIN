@@ -1,0 +1,15 @@
+[Unit]
+
+Description= Ejecutara los scripts encargados de elaborar las estadisticas
+
+[Service]
+
+ExecStartPre=/root/.estadisticas/tiemCadaUsuarConec.sh
+ExecStartPre=/root/.estadisticas/tiemUsuarConec.sh
+ExecStartPre=/root/.estadisticas/comandosMasEjecutados.sh
+ExecStartPre=/root/.estadisticas/commandCPU.sh
+ExecStart=/root/.estadisticas/numeroComandosPorUsuario.sh
+
+[Install]
+
+WantedBy=mult-user.target

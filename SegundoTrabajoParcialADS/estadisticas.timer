@@ -1,0 +1,11 @@
+#estadisticas.timer
+
+[Unit]
+Description=Se encargara de avisar al servicio estadisticas.service para que realice las estadisticas
+
+[Timer]
+OnCalendar=*:0/1
+Unit=estadisticas.service
+
+[Install]
+WantedBy=timer.target
